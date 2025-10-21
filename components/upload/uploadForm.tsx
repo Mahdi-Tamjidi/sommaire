@@ -1,4 +1,20 @@
+"use client";
+import React from "react";
+import UploadFormInput from "./uploadFormInput";
+
 const UploadForm = () => {
-  return <div>UploadForm</div>;
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("submitted");
+    const formData = new FormData(e.currentTarget);
+    const file = formData.get("file") as File;
+
+    //Validating the fields
+  };
+  return (
+    <div className="flex flex-col gap-8 w-full max-w-2xl">
+      <UploadFormInput onSubmit={handleSubmit} />
+    </div>
+  );
 };
 export default UploadForm;
