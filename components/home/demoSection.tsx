@@ -3,7 +3,7 @@ import { Pizza } from "lucide-react";
 const DemoSection = () => {
   return (
     <section className="relative">
-      <div className="py-12 lg:py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="py-12 lg:py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 lg:pt-12">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl"
