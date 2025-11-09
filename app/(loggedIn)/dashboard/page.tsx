@@ -6,6 +6,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { ArrowRight, Plus } from "lucide-react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import EmptySummary from "@/components/summaries/emptySummary";
 
 const DashboardPage = async () => {
   const user = await currentUser();
@@ -56,11 +57,15 @@ const DashboardPage = async () => {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 sm:px-0">
-            {summaries.map((summary, index) => (
-              <SummaryCard key={index} summary={summary} />
-            ))}
-          </div>
+          {summaries.length === 0 ? (
+            <EmptySummary />
+          ) : (
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 sm:px-0">
+              {summaries.map((summary, index) => (
+                <SummaryCard key={index} summary={summary} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </main>
