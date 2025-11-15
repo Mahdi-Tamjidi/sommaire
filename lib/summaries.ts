@@ -29,3 +29,15 @@ export const getSummaryById = async (id: string) => {
     return null;
   }
 };
+
+export const getUserUploadCount = async (userId?: string) => {
+  const sql = await getDbConnection();
+  try {
+    const [result] =
+      await sql`SELECT COUNT(*) as count FROM pdf_summaries WHERE user_id = ${userId}`;
+    return result?.count || 0;
+  } catch (error) {
+    console.error("Error fetching user upload count", error);
+    return 0;
+  }
+};
