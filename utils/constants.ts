@@ -33,3 +33,46 @@ export const pricingPlans = [
     priceId: isDev ? "price_1SRtQNJcDfsZXuWSucX0IC4c" : "",
   },
 ];
+
+export const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+export const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      easing: "ease-out",
+    },
+  },
+};
+
+export const buttonVariants = {
+  scale: 1.05,
+  transition: {
+    duration: 0.25,
+    easing: "ease-out",
+  },
+};
+
+export const listVariant = {
+  hidden: { opacity: 0, x: -20 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.5,
+      easing: "ease-out",
+    },
+  },
+};
