@@ -15,34 +15,15 @@ interface PdfSummaryType {
   fileName: string;
 }
 
-export const generatePdfSummary = async (
-  uploadResponse: [
-    {
-      serverData: {
-        userId: string;
-        file: {
-          url: string;
-          name: string;
-        };
-      };
-    }
-  ]
-) => {
-  if (!uploadResponse) {
-    return {
-      success: false,
-      message: "File upload failed",
-      data: null,
-    };
-  }
-
-  const {
-    serverData: {
-      userId,
-      file: { url: pdfUrl, name: fileName },
-    },
-  } = uploadResponse[0];
-
+export const generatePdfSummary = async ({
+  userId,
+  pdfUrl,
+  fileName,
+}: {
+  userId: string;
+  pdfUrl: string;
+  fileName: string;
+}) => {
   if (!pdfUrl) {
     return {
       success: false,
