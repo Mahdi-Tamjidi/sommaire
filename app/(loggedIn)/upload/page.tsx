@@ -22,9 +22,9 @@ const UploadPage = async () => {
   const { hasReachedLimit } = await hasReachedUploadLimit({ userId, email });
 
   //todo: remove this
-  // if (hasReachedLimit) {
-  //   redirect("/dashboard");
-  // }
+  if (hasReachedLimit) {
+    redirect("/dashboard");
+  }
   return (
     <section className="min-h-screen">
       <BgGradient />

@@ -16,9 +16,9 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
 
   // //todo: remove this
 
-  // if (hasActiveSubscription) {
-  //   return <UpgradeRequired />;
-  // }
+  if (!hasActiveSubscription) {
+    return <UpgradeRequired />;
+  }
   return <>{children}</>;
 };
 
