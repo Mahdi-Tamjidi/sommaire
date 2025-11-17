@@ -7,9 +7,13 @@ import { containerVariants } from "@/utils/constants";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 
+export const maxDuration = 60;
+
 const UploadPage = async () => {
   const user = await currentUser();
+
   const email = user?.emailAddresses?.[0]?.emailAddress;
+
   const userId = user?.id;
   if (!userId || !email) {
     return redirect("/sign-in");
