@@ -70,7 +70,7 @@ const DemoSection = () => {
               Watch how Sommaire transforms
               <span className="bg-linear-to-r from-rose-500 to-rose-700 bg-clip-text text-transparent">
                 {" "}
-                this Next.js course PDF{" "}
+                this PDF{" "}
               </span>
               into an easy-to-read summary!
             </MotionH3>
