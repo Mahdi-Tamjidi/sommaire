@@ -1,9 +1,6 @@
-````markdown
-# sommaire
+# Sommaire
 
-## Local Development
-
-### 1. Create Environment Variables
+## 1. Environment Variables
 
 Configure the following services before running the project:
 
@@ -17,29 +14,31 @@ Configure the following services before running the project:
 Create a `.env.local` file in the root directory and add:
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
+CLERK_SECRET_KEY
 
-UPLOADTHING_TOKEN=
+UPLOADTHING_TOKEN
 
-OPENAI_API_KEY=
-Llama_API_KEY=
+OPENAI_API_KEY
+Llama_API_KEY
 
-DATABASE_URL=
+DATABASE_URL
 
-STRIPE_SECRETE_KEY=
-STRIPE_WEBHOOK_SECRET=
+STRIPE_SECRETE_KEY
+STRIPE_WEBHOOK_SECRET
 
 NODE_ENV=development
 ```
 
-### 2. Install Dependencies
+## 2. Install Dependencies
+
+To run tests, run the following command
 
 ```bash
-npm install
+  npm install
 ```
 
-### 3. Start the Development Server
+## 3. Start the Development Server
 
 ```bash
 npm run dev
@@ -50,4 +49,3 @@ The application will be available at:
 ```text
 http://localhost:3000
 ```
-````
